@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Muhammad Touseef | Sociologist Portfolio</title>
+  <meta name="description" content="Portfolio of Muhammad Touseef — Sociologist focused on cultural studies, LGBTIQ+ dynamics, social psychology, sustainable environment, and political participation." />
+  <meta name="theme-color" content="#2563eb" />
+  <meta property="og:title" content="Muhammad Touseef | Sociologist Portfolio" />
+  <meta property="og:description" content="Analytically driven sociologist, committed to research in cultural studies, LGBTIQ+ dynamics, social psychology, sustainability, and political participation." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yourusername.github.io/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #0f172a;
+      --muted: #475569;
+      --primary: #2563eb;
+      --primary-600: #1d4ed8;
+      --accent: #22c55e;
+      --card: #ffffff;
+      --border: #e5e7eb;
+      --shadow: 0 8px 30px rgba(2, 6, 23, 0.06);
+      --radius: 14px;
+      --maxw: 1100px;
+    }
+    [data-theme="dark"] {
+      --bg: #0b1220;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --primary: #60a5fa;
+      --primary-600: #3b82f6;
+      --accent: #22d3ee;
+      --card: #0f172a;
+      --border: #1f2a44;
+      --shadow: 0 10px 36px rgba(0, 0, 0, 0.45);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+      color: var(--text);
+      background: radial-gradient(1200px 700px at 20% -10%, rgba(37,99,235,0.12), transparent 60%), radial-gradient(900px 600px at 120% 10%, rgba(34,197,94,0.12), transparent 60%), var(--bg);
+      line-height: 1.6;
+    }
+    .container {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .skip-link {
+      position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden;
+    }
+    .skip-link:focus { position: static; width: auto; height: auto; padding: 8px 12px; background: var(--primary); color: #fff; border-radius: 8px; }
+    header.site-header {
+      position: sticky; top: 0; z-index: 30;
+      backdrop-filter: saturate(160%) blur(10px);
+      background: linear-gradient(to bottom, rgba(255,255,255,0.8), rgba(255,255,255,0.6));
+      border-bottom: 1px solid var(--border);
+    }
+    [data-theme="dark"] header.site-header {
+      background: linear-gradient(to bottom, rgba(11,18,32,0.8), rgba(11,18,32,0.6));
+    }
+    .site-header-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 0;
+    }
+    .brand {
+      display: flex; align-items: center; gap: 12px;
+    }
+    .logo {
+      display: inline-grid; place-items: center; width: 42px; height: 42px; border-radius: 12px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: #fff; font-weight: 800; letter-spacing: 0.5px; text-decoration: none;
+      box-shadow: var(--shadow);
+    }
+    .brand .meta {
+      display: flex; flex-direction: column; line-height: 1.2;
+    }
+    .brand .name { font-weight: 800; font-size: 1.05rem; }
+    .brand .role { color: var(--muted); font-size: 0.9rem; }
+    nav.primary-nav ul { list-style: none; display: flex; gap: 18px; margin: 0; padding: 0; flex-wrap: wrap; }
+    nav.primary-nav a {
+      color: var(--text); text-decoration: none; font-weight: 600; padding: 8px 10px; border-radius: 10px;
+    }
+    nav.primary-nav a:hover { color: var(--primary); background: rgba(37,99,235,0.08); }
+    [data-theme="dark"] nav.primary-nav a:hover { background: rgba(96,165,250,0.12); }
+    .header-actions { display: flex; align-items: center; gap: 10px; }
+    .btn {
+      appearance: none; border: 1px solid var(--border); background: var(--card); color: var(--text);
+      padding: 8px 12px; border-radius: 10px; cursor: pointer; font-weight: 600; box-shadow: var(--shadow);
+    }
+    .btn:hover { border-color: var(--primary); }
+    .btn.primary {
+      border: none; background: linear-gradient(135deg, var(--primary), var(--primary-600)); color: #fff;
+    }
+    .btn.icon { display: inline-flex; align-items: center; gap: 8px; }
+    /* Hero */
+    .hero { padding: 54px 0 24px; }
+    .hero-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+    .hero h1 {
+      margin: 0 0 6px; font-size: 2.1rem; line-height: 1.2; letter-spacing: -0.02em;
+    }
+    .subtitle { color: var(--muted); font-size: 1.05rem; margin-bottom: 12px; }
+    .contact-chips { display: flex; gap: 10px; flex-wrap: wrap; margin: 14px 0 0; }
+    .chip {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 8px 12px; border-radius: 999px;
+      background: rgba(37,99,235,0.08); color: var(--text);
+      border: 1px solid var(--border);
+      text-decoration: none; font-weight: 600;
+    }
+    [data-theme="dark"] .chip { background: rgba(96,165,250,0.12); }
+    .chip:hover { border-color: var(--primary); }
+    .section { padding: 28px 0; }
+    .section h2 { font-size: 1.4rem; letter-spacing: -0.01em; margin: 0 0 14px; }
+    .muted { color: var(--muted); }
+    .grid {
+      display: grid; gap: 14px;
+    }
+    @media (min-width: 880px) {
+      .grid.two { grid-template-columns: 1.2fr 1fr; }
+      .grid.three { grid-template-columns: 1fr 1fr 1fr; }
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: var(--shadow);
+    }
+    .item h3 { margin: 0 0 6px; font-size: 1.05rem; }
+    .item .meta { font-size: 0.95rem; color: var(--muted); margin-bottom: 6px; }
+    .item ul { margin: 6px 0 0 18px; }
+    .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+    .tag {
+      padding: 6px 10px; border-radius: 999px; background: rgba(15,23,42,0.04);
+      border: 1px solid var(--border); font-size: 0.92rem;
+    }
+    [data-theme="dark"] .tag { background: rgba(255,255,255,0.04); }
+    details.pub { border: 1px dashed var(--border); border-radius: 12px; padding: 12px; background: transparent; }
+    details.pub summary { cursor: pointer; font-weight: 700; }
+    details.pub ul { margin-top: 10px; }
+    .inline-list { list-style: none; margin: 0; padding: 0; display: flex; gap: 10px; flex-wrap: wrap; }
+    footer {
+      padding: 28px 0 50px; text-align: center; color: var(--muted);
+    }
+    .footer-links { margin-top: 10px; }
+    .footer-links a { color: var(--primary); text-decoration: none; }
+    .footer-links a:hover { text-decoration: underline; }
+    .print-note { display: none; }
+    @media print {
+      header.site-header, .header-actions, .contact-chips, .btn, .chip, .footer-links { display: none !important; }
+      body { background: #fff !important; }
+      .card, .hero-card { box-shadow: none; border-color: #d1d5db; }
+      .print-note { display: block; font-style: italic; color: #6b7280; }
+      a { color: #000; text-decoration: underline; }
+      .section { page-break-inside: avoid; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Muhammad Touseef",
+    "jobTitle": "Sociologist",
+    "email": "mailto:touseefeli@hotmail.com",
+    "telephone": "+923046927228",
+    "sameAs": [
+      "https://orcid.org/0000-0002-2858-0110"
+    ],
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Government College University Faisalabad"
+    },
+    "knowsAbout": [
+      "Cultural Studies",
+      "LGBTIQ+ Dynamics",
+      "Social Psychology",
+      "Sustainable Development",
+      "Political Participation",
+      "Sociology of Religion",
+      "Human Rights"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#about">Skip to content</a>
+  <header class="site-header">
+    <div class="container site-header-inner">
+      <div class="brand">
+        <a class="logo" href="#" aria-label="Home">MT</a>
+        <div class="meta">
+          <span class="name">Muhammad Touseef</span>
+          <span class="role">Recent Graduate in Sociology</span>
+        </div>
+      </div>
+      <nav class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#publications">Publications</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#leadership">Leadership</a></li>
+          <li><a href="#awards">Awards</a></li>
+          <li><a href="#references">References</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="btn icon" id="printBtn" title="Print or Save as PDF" aria-label="Print or Save as PDF">🖨️ Print/PDF</button>
+        <button class="btn icon" id="themeToggle" aria-label="Toggle theme" title="Toggle light/dark">🌙 Theme</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container">
+        <div class="hero-card">
+          <h1>Hi, I’m Muhammad Touseef</h1>
+          <p class="subtitle">Analytically driven sociologist focused on cultural studies, LGBTIQ+ dynamics, social psychology, sustainable environment, and the sociology of political participation.</p>
+          <div class="contact-chips" aria-label="Contact">
+            <a class="chip" href="mailto:touseefeli@hotmail.com" rel="noopener">📧 touseefeli@hotmail.com</a>
+            <a class="chip" href="tel:+923046927228" rel="noopener">📞 +92 304 692 7228</a>
+            <a class="chip" href="https://orcid.org/0000-0002-2858-0110" target="_blank" rel="noopener noreferrer">🧬 ORCID</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container grid two">
+        <div class="card">
+          <h2>Objective</h2>
+          <p>Analytically driven sociologist with a strong academic foundation, deeply interested in sociological research in cultural studies, LGBTIQ+ dynamics, social psychology, sustainable environment, and sociology of political participation. Committed to contributing to advanced sociological research to address global challenges such as social cohesion, environmental sustainability, and equitable political representation.</p>
+        </div>
+        <div class="card">
+          <h2>Research Interests</h2>
+          <div class="tags" aria-label="Research interests">
+            <span class="tag">Sociology of Political Participation</span>
+            <span class="tag">Sustainable Development</span>
+            <span class="tag">LGBTIQ+ Dynamics</span>
+            <span class="tag">Religion & Human Rights</span>
+            <span class="tag">Cultural Studies</span>
+            <span class="tag">Social Psychology</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="section">
+      <div class="container">
+        <h2>Education</h2>
+        <div class="card item">
+          <h3>Bachelor of Science in Sociology</h3>
+          <div class="meta">Government College University Faisalabad • 2020–2024</div>
+          <ul>
+            <li>CGPA: 3.70 / 4.00</li>
+            <li>Research Project: Family Dynamics in a Conservative Context and the Relationships Between LGBTQ+ Teenagers and Parents in Pakistan</li>
+            <li>Published in the Nigerian Journal of Economic and Social Studies (Vol. 66)</li>
+          </ul>
+        </div>
+
+        <div class="grid">
+          <div class="card item">
+            <h3>Online Courses</h3>
+            <ul>
+              <li>Feminism and Social Justice — University of California, Santa Cruz (Coursera)</li>
+              <li>Social Norms, Social Change I — University of Pennsylvania, UNICEF (Coursera)</li>
+            </ul>
+          </div>
+          <div class="card item">
+            <h3>Honors & Awards</h3>
+            <ul>
+              <li>Award for Quality Research in Local Sociological Inquiry</li>
+              <li>Award for Excellent Assistantship</li>
+              <li>Prime Minister Laptop Scheme of Merit for Academic Excellence</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <div class="container">
+        <h2>Experience</h2>
+        <div class="grid two">
+          <div class="card item">
+            <h3>Third-Party Field Monitor (LQAS & PCM) — Polio Eradication</h3>
+            <div class="meta">World Health Organization, Pakistan • Oct 2022 – Dec 2023</div>
+            <ul>
+              <li>Monitored and evaluated the effectiveness of polio eradication campaigns.</li>
+              <li>Ensured data accuracy and quality control in field operations.</li>
+            </ul>
+          </div>
+          <div class="card item">
+            <h3>Research & Project Support (Internship)</h3>
+            <div class="meta">Ministry of Human Rights, Pakistan (PMU) • Dec 1, 2023 – Jun 1, 2024</div>
+            <ul>
+              <li>Data analysis, report writing, and policy analysis.</li>
+              <li>Coordinated field research activities.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="grid two" style="margin-top:14px;">
+          <div class="card item">
+            <h3>Research Assistant</h3>
+            <div class="meta">Department of Sociology, GCU Faisalabad • Dec 2022 – Mar 2024</div>
+            <ul>
+              <li>Conducted data collection, analysis, and literature reviews for sociological studies.</li>
+            </ul>
+          </div>
+          <div class="card item">
+            <h3>Volunteer Team Lead</h3>
+            <div class="meta">Ration Distribution for Flood-Affected Families • 2022</div>
+            <ul>
+              <li>Organized and distributed essential supplies in collaboration with local organizations.</li>
+              <li>Led a volunteer team on behalf of the Department of Sociology, GCU Faisalabad.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="research" class="section">
+      <div class="container">
+        <h2>Research</h2>
+        <div class="grid two">
+          <div class="card item">
+            <h3>Independent Research Projects</h3>
+            <ul>
+              <li>The Role of Religion in Building Resilience to Climate Change in Pakistan</li>
+              <li>Understanding the Role of Automation in Society and its Impact on the Labour Market</li>
+              <li>The Influence of Cultural Values and Norms on Political Attitudes and Behavior: A Sociological Study</li>
+              <li>Global Constitutionalism and Democratic Deficit: The Impact of Digital Participation on Constitutional Rights in E-Governance (Current)</li>
+            </ul>
+          </div>
+          <div class="card item">
+            <h3>Peer Review</h3>
+            <ul>
+              <li>7 peer reviews for 1 publication/grant — International Journal of System Assurance Engineering and Management (ISSN: 0976-4348)</li>
+              <li>3 peer reviews — SAGE Open (ISSN: 2158-2440)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="publications" class="section">
+      <div class="container">
+        <h2>Publications & Presentations</h2>
+
+        <div class="card item">
+          <h3>Book</h3>
+          <ul>
+            <li>Social Tolerance: Principles and Practices for a Pluralistic Society. Lumina Literati Publishing, 2024.</li>
+          </ul>
+        </div>
+
+        <div class="card item">
+          <h3>Book Review</h3>
+          <ul>
+            <li>Constitutional Democracy and Islam: The Legal Status of Muslims in Italy by Francesco Alicino — International Journal of Human Rights and Constitutional Studies (Inderscience), June 1, 2024.</li>
+          </ul>
+        </div>
+
+        <div class="card item">
+          <h3>Journal Articles</h3>
+          <ul>
+            <li>The Influence of Cultural Values and Norms on Political Attitudes and Behavior: A Sociological Study — Advanced Qualitative Research, Sept 2023.</li>
+            <li>Understanding the Role of Automation in Society and its Impact on the Labour Market — International Journal of Asian Business and Management, Aug 2023.</li>
+            <li>Sweet Rice and Postcolonialism: Uncovering the Layers of Identity, Cultural Hybridity, and Self-independence in Amir Hussain's Short Story — Praxis International Journal of Social Science and Literature, June 2023.</li>
+            <li>Exploring the Complex Underground Social Networks Between Plants and Mycorrhizal Fungi Known as the Wood Wide Web — Plant Science Archive, Mar 2023.</li>
+          </ul>
+        </div>
+
+        <div class="card item">
+          <h3>Conference Abstracts</h3>
+          <ul>
+            <li>An Empirical Analysis of the Impact of Covid-19 on Women's Political Participation and Leadership: Assessing Representation in Post-Covid Decision Making — 3rd International Conference on Gender Studies: Contemporary Gender Issues, Dec 2023.</li>
+            <li>Race and Religion in Pakistani Society: Unpacking Complexities and Emerging Challenges for Cultural Pluralism, Human Rights, and National Integration — 1st International Conference on Interplay of Social Sciences Research, Responsible Management and Sustainable Future, May 2023.</li>
+            <li>The Role of Religion in Building Resilience to Climate Change in Pakistan — International Conference on Sustainable Development in Pakistan, University of Home Economics Lahore, Mar 2023.</li>
+            <li>An Evaluation of the Effects of Reused Water Irrigation on Rural Development — International Seminar on Agroecological and Social Interventions of Reused Water Irrigation, Feb 2023.</li>
+            <li>Understanding the Role of Reused Water Irrigation in Achieving Food Security in Faisalabad, Jhang, and Bhakkar Districts of Punjab — International Seminar on Agroecological and Social Interventions of Reused Water Irrigation, Feb 2023.</li>
+            <li>Innovative Solutions for Reusing Wastewater in Pakistan: Challenges and Opportunities — International Seminar on Agroecological and Social Interventions of Reused Water Irrigation, Feb 2023.</li>
+            <li>Understanding the Influence of Gender on Online Shopping Trends in Pakistan's Retail Industry with a Focus on Women-Led Online Stores — 1st International Conference on Interplay of Social Sciences Research, Responsible Management and Sustainable Future, May 2023.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="container">
+        <h2>Skills</h2>
+        <div class="card">
+          <ul class="inline-list">
+            <li class="tag">Data Collection & Analysis</li>
+            <li class="tag">Academic Advertisement</li>
+            <li class="tag">Manuscripts Management</li>
+            <li class="tag">Sensitive Data Collection (Ethnography)</li>
+            <li class="tag">Qualitative & Quantitative Research</li>
+            <li class="tag">Field Research Coordination</li>
+            <li class="tag">Policy Analysis & Report Writing</li>
+            <li class="tag">Communication & Presentation</li>
+            <li class="tag">Microsoft Office Suite</li>
+            <li class="tag">DOI Management & Indexing</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="leadership" class="section">
+      <div class="container">
+        <h2>Leadership & Extracurricular</h2>
+        <div class="grid two">
+          <div class="card item">
+            <h3>Finance Secretary</h3>
+            <div class="meta">Writers' Club, GCU Faisalabad • 2022 – Present</div>
+            <p class="muted">Managed finance-related tasks to ensure the smooth running of the club.</p>
+          </div>
+          <div class="card item">
+            <h3>Program Manager</h3>
+            <div class="meta">Beaconites Quiz Society, GCU Faisalabad • 2022 – 2023</div>
+          </div>
+        </div>
+        <div class="card item" style="margin-top:14px;">
+          <h3>Quiz Wing Head</h3>
+          <div class="meta">Beaconites Quiz Society, GCU Faisalabad • 2023 – Present</div>
+        </div>
+
+        <div class="card item" style="margin-top:14px;">
+          <h3>Extracurricular Awards</h3>
+          <ul>
+            <li>Winner: Book Trivia at NUML Tishnagi-e-Adab'23</li>
+            <li>Winner: Urdu Short Story at NAMU'23</li>
+            <li>Winner: English Poetry at the Lahore Alma Literary Competition 2022</li>
+            <li>Winner: English Essay Writing Olympiad'22 by Al-Haq Education</li>
+            <li>Winner: APOC'22 in Urdu Short Story — University Student's Art Bond & Veterinary News Magazine</li>
+            <li>Winner: 100 Words Urdu Story — Tafheem All Pakistan Literary Competitions'22 (Shalimar Medical & Dental College)</li>
+            <li>Winner: Caption the Picture — Online Pakistan Day Literary Festival 2022 (Al-Mohandis Literary Society)</li>
+            <li>Runner Up: Kinnaird College for Women University Lahore Science Quiz Competition 2022</li>
+            <li>Winner: Government Graduate College Garh Maharaja Serat Rasool Competition 2019</li>
+            <li>Winner: CM Declamation Contest 2018 at Jhang Government College</li>
+            <li>Winner: Short Story Writing Competition 2021–2022 — Directorate of Students' Affairs, GCUF</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="references" class="section">
+      <div class="container">
+        <h2>References</h2>
+        <div class="grid two">
+          <div class="card item">
+            <h3>Dr. Basharat Ali</h3>
+            <div class="meta">Assistant Professor, Department of Sociology — GCU Faisalabad</div>
+            <a href="mailto:basharatali@gcuf.edu.pk">basharatali@gcuf.edu.pk</a>
+          </div>
+          <div class="card item">
+            <h3>Dr. Saira Siddiqui</h3>
+            <div class="meta">Assistant Professor, Department of Sociology — GCU Faisalabad</div>
+            <a href="mailto:sairasiddiqui@gcuf.edu.pk">sairasiddiqui@gcuf.edu.pk</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="footer-contact" class="section">
+      <div class="container card">
+        <h2>Get in touch</h2>
+        <p class="muted">I’m open to research collaborations, assistantships, and opportunities in sociology and public policy.</p>
+        <div class="contact-chips">
+          <a class="chip" href="mailto:touseefeli@hotmail.com">📧 Email</a>
+          <a class="chip" href="tel:+923046927228">📞 Call</a>
+          <a class="chip" target="_blank" rel="noopener noreferrer" href="https://orcid.org/0000-0002-2858-0110">🧬 ORCID</a>
+        </div>
+        <p class="print-note">Tip: File → Print → Save as PDF for a clean resume export.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div>© <span id="year"></span> Muhammad Touseef. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="#about">About</a> ·
+        <a href="#publications">Publications</a> ·
+        <a href="#skills">Skills</a> ·
+        <a href="#footer-contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Theme persistence
+    (function() {
+      const root = document.documentElement;
+      const stored = localStorage.getItem('theme');
+      if (stored) root.setAttribute('data-theme', stored);
+      const toggle = document.getElementById('themeToggle');
+      function toggleTheme() {
+        const isDark = root.getAttribute('data-theme') === 'dark';
+        const next = isDark ? '' : 'dark';
+        if (next) root.setAttribute('data-theme', next); else root.removeAttribute('data-theme');
+        localStorage.setItem('theme', next);
+        toggle.textContent = next === 'dark' ? '☀️ Theme' : '🌙 Theme';
+      }
+      if (toggle) {
+        // Set initial icon
+        const isDark = root.getAttribute('data-theme') === 'dark';
+        toggle.textContent = isDark ? '☀️ Theme' : '🌙 Theme';
+        toggle.addEventListener('click', toggleTheme);
+      }
+      // Print button
+      const printBtn = document.getElementById('printBtn');
+      if (printBtn) printBtn.addEventListener('click', () => window.print());
+      // Year
+      const y = document.getElementById('year');
+      if (y) y.textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>
